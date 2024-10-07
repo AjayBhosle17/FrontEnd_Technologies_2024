@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing Event</title>
+
+    <style>
+        body {
+            background-color: darksalmon;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 3rem;
+            color: white;
+        }
+
+        #clock {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: thistle;
+            height: 100px;
+            margin: 50px auto;
+            font-size: 2.5rem;
+            width: 60%;
+            border-radius: 15px;
+            color: darkslategray;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .buttons input {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: lightcoral;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons input:hover {
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>Timing Event</h1>
+
+    <div id="clock">00:00:00</div>
+
+    <div class="buttons">
+        <input type="button" value="Start Clock" onclick="startClock()">
+        <input type="button" value="Stop Clock" onclick="stopClock()">
+    </div>
+
+    <script src="./timing.js"></script>
+</body>
+</html>
