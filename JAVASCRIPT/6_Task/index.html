@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        .start{
+
+            background-color: aquamarine;
+        }
+
+        .start:hover{
+            background-color: rgb(225, 149, 7);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color: antiquewhite;">
+
+    <h1 style="text-align: center;">Photo Gallery</h1>
+
+    <div id="Images" style="display: flex; justify-content: center;align-items: center;">
+        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+            <img id="slideshowImage" src="Images/Virat Kohli and AB Devilliers.jpeg" alt="VK Image"style="
+            
+            height: 350px;
+            width: 350px;
+            border: 5px solid white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);margin: 20px;
+            
+
+        ">
+        </a>
+        </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; ">
+        
+    <input class="start" type="button" value="Start Slide Show" onclick="startSlide()" style="margin-right: 10px;">
+    <input class="start" type="button" value="Stop Slide Show" onclick="stopSlide()">
+    </div>
+    <script src="./images.js"></script>
+</body>
+</html>
