@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+    <style>
+         body {
+            background-color: cornflowerblue;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #bt1:hover {
+            cursor: pointer;
+            background-color: rgb(247, 14, 197);
+        }
+        #message {
+            color: red;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Addition Of 2 Numbers</h1>
+
+    <div class="container">
+        <label for="num1">First Number:</label>
+        <input type="text" id="num1">
+    </div>
+
+    <div class="container" style="margin-top: 20px;">
+        <label for="num2">Second Number:</label>
+        <input type="text" id="num2">
+    </div>
+
+    <input type="button" id="bt1" onclick="addition()" value="Add Numbers" style="background-color: burlywood; margin-top: 30px;">
+
+    <div class="result" style="margin-top: 20px;">
+        <label for="result">Result:</label>
+        <input type="text" id="result">
+    </div>
+
+    <div>
+        <label id="message"></label>
+    </div>
+
+    <script src="./addition.js"></script>
+</body>
+</html>
