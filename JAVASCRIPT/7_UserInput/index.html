@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserDomain</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            background-color: rgb(240, 240, 238);
+            
+        }
+       
+        label {
+            background-color: rgb(5, 5, 5); 
+            color: rgb(10, 203, 237); 
+            margin-right: 10px; 
+            font-size: 20px; 
+            margin-top: 20px;
+           border-radius: 2px;
+        }
+
+        input {
+            background-color: black; 
+            color: white; 
+            font-size: 16px;
+            width: 250px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+        .btn1:hover{
+
+            background-color: rgb(37, 154, 250);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; margin-bottom: 80px;">UserName & Domain</h1>
+    
+    <div id="input">
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Enter Email Here">
+    </div>
+
+    <!-- button -->
+    <input type="button" class="btn1" onclick="showDomain()" value="Get UserName and Domain Click Me :)" style="margin-top: 50px; width: 350px; ">
+
+    <!-- UserName -->
+    <div style="margin-top: 60px;">
+        <label for="username">UserName:</label>
+        <input type="text" id="username" placeholder="User Name" readonly> 
+
+        <!-- Domain -->
+        <label for="domain">Domain Name:</label>
+        <input type="text" id="domain" placeholder="Domain Name" readonly> 
+    </div>
+
+    <script src="./userDomain.js"></script>
+</body>
+</html>
