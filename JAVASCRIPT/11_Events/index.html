@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            text-align: center;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    <h1 oncopy="return false;" >Event Handling</h1>
+
+    <label for="username">UserName:</label>
+    <input type="text" name="UserName"  onpaste="return false;"  id="username"   onmouseover="onmouseOver()" onmousemove="onmouseMOve()" onmouseout="onMouseOut()"  onmousedown="onMouseDown()" onmouseup="onMouseUp()" onclick="onClick() " ondblclick="onDblClick()" oncontextmenu="OnContext()" onfocus="OnFOcus()" onblur="OnBlur()" onkeydown="OnKeyDown()" onkeyup="OnKeyUp() " onkeypress="OnKeyPress()">
+    <br>
+    <br>
+
+    <textarea name="textArea" id="txt1" rows="15" cols="34" readonly></textarea>
+    <br>
+    <a href="https://google.com"   onclick="return false;">Google</a>
+    <script src="./event.js"></script>
+    
+</body>
+</html>
