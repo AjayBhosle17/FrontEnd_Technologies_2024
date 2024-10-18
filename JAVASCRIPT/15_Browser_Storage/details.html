@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+    <h2>Student details</h2>
+
+    <label>Name : </label>
+    <label id="name"> </label>
+    <br>
+    Email: <label id="Email"></label>
+    <script>
+        // var name = sessionStorage.getItem('StudentName');
+        var name = localStorage.getItem('StudentName');
+
+
+        document.getElementById('name').innerText=name;
+        // var email = sessionStorage.getItem('Email');
+
+        var email = localStorage.getItem('Email');
+        document.getElementById('Email').innerText=email;
+    </script>
+</body>
+</html>

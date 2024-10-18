@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Regular Expression Demo</h1>
+
+    <input type="button" value="Process Input" onclick="processInput()" />
+    <hr />
+    Input:
+    <textarea rows="3" cols="100" id="input"></textarea>
+    <hr />
+    Output:
+    <textarea rows="3" cols="100" id="output"></textarea>
+
+    <script>
+        function processInput() {
+            var input = document.getElementById('input').value;
+
+            //// var output = input.replace('vikul', 'vihaan');
+            //var output = input.replace(/vikul/gi, 'vihaan');
+
+            // var output = input.match(/\d+/g); // any number of digits
+
+            // var output = input.match(/\d{2}/g); // two digit numbers only
+
+            //var pattern = new RegExp('\\d+', 'gi');
+            //var output = input.match(pattern);
+
+            //var pattern = new RegExp('\[a-z]', 'g');
+            //var output = input.match(pattern);
+
+            //var pattern = new RegExp('\[a-zA-Z0-9]', 'g');
+            //var output = input.match(pattern);
+
+            //var pattern = new RegExp('\[^a-zA-Z0-9]', 'g');
+            //var output = input.match(pattern);
+
+            //// validate 10 digit mobile number
+            //var pattern = new RegExp('\[0-9]{10}');
+
+            // var pattern = new RegExp('\[6789]+[0-9]{9}');
+
+            // check whether input contains vowels
+            var pattern = /^[0-9]{10}/;
+
+            var output = pattern.test(input);
+            if (output) {
+                document.getElementById('output').value = 'valid mobile number';
+            } else {
+                document.getElementById('output').value = 'invalid mobile number';
+            }
+
+        }
+    </script>
+</body>
+</html>
