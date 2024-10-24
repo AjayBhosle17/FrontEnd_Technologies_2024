@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To_Do_App</title>
     <link rel="stylesheet" href="./style.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1 style="text-align: center;">To Do Application</h1>
+   
+    
+    <div id="OuterDiv">
+        <h1 style="text-align: center;">To Do Application</h1>
+        <div id="mainDiv">
+
+            <form id="taskForm">
+                <textarea rows="3" cols="40" id="taskInput" placeholder="Enter a Task...:)"></textarea>
+                <br>
+                <button type="button" id="addTaskBtn">Add Task</button>
+            </form>
+            <ul id="taskList">
+                <h1 id="title"></h1>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="./to_do.js"></script>
     
 </body>
 </html>

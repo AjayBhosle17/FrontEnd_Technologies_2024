@@ -11,4 +11,12 @@ $(document).ready(function() {
                 $('#p1').prepend('Prepended Text');
                 $('#p1').before('Before Text');
     });
+
+    $('#contains').prepend('<li>prepend</li>');
+    $('#contains').before('<li>before</li>');
+    $('#contains').after('<li>after</li>');
+    $('#contains').append('<li>append</li>');
+
+
+
 });

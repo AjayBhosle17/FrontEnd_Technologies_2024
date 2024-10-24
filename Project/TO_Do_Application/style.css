@@ -1,9 +1,64 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: darkcyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#OuterDiv {
+    display: flex;
+    flex-direction: column;
+    
+    height: 500px;
+    width: 500px;
+    background-color: burlywood;
+    padding: 20px;
+}
+
+#mainDiv {
+    margin: 80px auto;
+    text-align: center;
+}
+
+#taskForm{
+    
+    background-color: rgb(245, 242, 242);
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+#taskForm textarea{
+    
+    background-color: rgb(77, 176, 247);
+    padding: 10px;
+    font-size: 16px;
+    color: rgb(47, 1, 44);
+    margin-bottom: 10px;
+    
+}
+
+#taskForm button {
+    background-color: rgb(224, 152, 220);
+    padding: 10px 20px;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    box-shadow: 3px;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
 }

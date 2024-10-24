@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: rgb(47, 49, 38);
+           
+        }
+        #mainDiv {
+            color: darkgray;
+            padding: 20px;
+            border: 1px solid gray;
+        }
+
+            #mainDiv * {
+                color: darkgray;
+                
+                padding: 20px;
+                border: 1px solid gray;
+            }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Traversing</h1>
+    <input type="button" id="btn1" value="Click Me ...!">
+    <div id="mainDiv" style="border: 4px ">
+        Main Div
+        <div>Div1
+
+            <p>Paragraph Tag</p>
+            <h4>Heading 4</h4>
+        </div>
+        <div>Div2
+
+            <p>Paragraph Tag</p>
+            <h3>Heading 3</h3>
+        </div>
+
+    </div>
+
+    <script src="./traverse.js"></script>
+    
+</body>
+</html>
