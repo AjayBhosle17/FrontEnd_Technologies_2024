@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <style>
+        body{
+            background-color: darksalmon;
+        }
+        div *{
+            border: 2px solid gray;
+            padding: 20px;
+        }
+        #mainDiv{
+            border: 2px solid gray;
+            padding: 10px;
+        }
+        .Active{
+            border: 2px solid yellow;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Filtering Function</h1>
+
+    <input type="button" id="btn1" value="Click Me....!">
+<br><br>
+    <div id="mainDiv">
+        <div >
+            Main Div
+            <p>Paragraph 1</p>
+            <h2>Heading 2</h2>
+            <p class="active">Paragraph 3</p>
+        </div>
+
+        <div>
+            Child Div
+
+            <h2 >
+                Heading 2
+            </h2>
+
+            <p class="active">
+                Paragraph 1
+            </p>
+
+        </div>
+    </div>
+
+    <script src="./filter.js"></script>
+    
+</body>
+</html>
