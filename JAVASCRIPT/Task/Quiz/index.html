@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Quiz</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+
+    /* Quiz container */
+    .quiz-container {
+      width: 100%;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    /* Question styling */
+    .question {
+      font-size: 18px;
+      margin: 20px 0 10px;
+    }
+
+    /* Options styling */
+    .options label {
+      display: block;
+      padding: 8px 0;
+      cursor: pointer;
+    }
+
+    /* Button styling */
+    .submit-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      margin-top: 20px;
+      display: block;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Score styling */
+    .score {
+      font-size: 20px;
+      text-align: center;
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h2>Interactive Quiz</h2>
+
+    <!-- Question 1 -->
+    <div class="question">1. What is the capital of France?</div>
+    <div class="options">
+      <label><input type="radio" name="q1" value="A"> A. Madrid</label>
+      <label><input type="radio" name="q1" value="B"> B. Paris</label>
+      <label><input type="radio" name="q1" value="C"> C. Rome</label>
+      <label><input type="radio" name="q1" value="D"> D. Berlin</label>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">2. Which planet is known as the Red Planet?</div>
+    <div class="options">
+      <label><input type="radio" name="q2" value="A"> A. Earth</label>
+      <label><input type="radio" name="q2" value="B"> B. Venus</label>
+      <label><input type="radio" name="q2" value="C"> C. Mars</label>
+      <label><input type="radio" name="q2" value="D"> D. Jupiter</label>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">3. What is the largest ocean on Earth?</div>
+    <div class="options">
+      <label><input type="radio" name="q3" value="A"> A. Atlantic Ocean</label>
+      <label><input type="radio" name="q3" value="B"> B. Indian Ocean</label>
+      <label><input type="radio" name="q3" value="C"> C. Arctic Ocean</label>
+      <label><input type="radio" name="q3" value="D"> D. Pacific Ocean</label>
+    </div>
+
+    <!-- Submit button -->
+    <button class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+
+    <!-- Score display -->
+    <div id="score" class="score"></div>
+  </div>
+
+  <!-- JavaScript to handle quiz logic -->
+  <script>
+    function submitQuiz() {
+      // Correct answers
+      const correctAnswers = {
+        q1: 'B',
+        q2: 'C',
+        q3: 'D'
+      };
+
+      let score = 0;
+
+      // Check answers
+      for (const [question, answer] of Object.entries(correctAnswers)) {
+        const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+        
+        if (userAnswer && userAnswer.value === answer) {
+          score++;
+        }
+      }
+
+      // Display the score
+      const totalQuestions = Object.keys(correctAnswers).length;
+      document.getElementById('score').innerText = `You scored ${score} out of ${totalQuestions}.`;
+    }
+  </script>
+
+</body>
+</html>
